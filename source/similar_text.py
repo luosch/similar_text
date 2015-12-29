@@ -45,14 +45,14 @@ def similar_text(str1, str2, option='normal'):
     elif option == 'fast':
         pass
     else:
-        raise Exception('no such option')
+        raise ValueError("no such option")
 
 
 def edit_distance():
     pass
 
-# simple test
-if __name__ == "__main__":
-    print similar_text('aaaa', 'aaaa')
-    print similar_text('aaaa', 'aaaabbbb')
-    print similar_text('abcdef', 'aabcdefg')
+# # simple test
+# if __name__ == "__main__":
+#     print similar_text('aaaa', 'aaaa')
+#     print similar_text('aaaa', 'aaaabbbb')
+#     print similar_text('abcdef', 'aabcdefg')
