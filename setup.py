@@ -12,7 +12,7 @@ setup(
     author = 'Sicheng Luo',
     author_email = 'i@lsich.com',
     url = 'https://github.com/luosch/similar_text',
-    download_url = 'https://github.com/luosch/mypackage/similar_text/0.1',
+    download_url = 'https://github.com/luosch/similar_text/tarball/v0.1',
     keywords = ['similar_text', 'similar', 'text'],
     classifiers = [],
 )
