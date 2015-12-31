@@ -14,5 +14,7 @@ setup(
     url = 'https://github.com/luosch/similar_text',
     download_url = 'https://github.com/luosch/similar_text/tarball/v0.1',
     keywords = ['similar_text', 'similar', 'text'],
-    classifiers = [],
+    classifiers = [
+        'License :: MIT License'
+    ],
 )
