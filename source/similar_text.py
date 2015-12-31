@@ -42,7 +42,6 @@ def similar_text(str1, str2, option='normal'):
     """
     return a float value in [0, 100], which stands for match level
     """
-    
     if len(str1) == 0 and len(str2) == 0:
         return 0.0
     elif option == 'normal':
@@ -75,9 +74,3 @@ def edit_distance(str1, str2):
                 dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1
     
     return dp[-1][-1]
-
-# # simple test
-# if __name__ == "__main__":
-#     print similar_text('aaaa', 'aaaa')
-#     print similar_text('aaaa', 'aaaabbbb')
-#     print similar_text('abcdef', 'aabcdefg')
