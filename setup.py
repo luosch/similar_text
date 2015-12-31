@@ -3,13 +3,13 @@ try:
 except:
     from distutils.core import setup
 
-with open('README.md', 'r', 'utf-8') as f:
+with open('README.rst') as f:
     readme = f.read()
 
 setup(
     name = 'similar_text',
-    packages = ['source'],
-    version = '0.1',
+    packages = ['similar_text'],
+    version = '0.1.3',
     description = 'Calculates the similarity between two strings',
     long_description = readme,
     author = 'Sicheng Luo',

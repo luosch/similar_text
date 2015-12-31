@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-from source.similar_text import similar_text
+from similar_text import similar_text
 
 class TestStringMethods(unittest.TestCase):
     def test_similar_normal(self):
