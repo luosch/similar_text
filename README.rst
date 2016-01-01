@@ -5,7 +5,7 @@ similar_text
     :target: https://pypi.python.org/pypi/similar_text
 
 
-:code:`similar_text` calculate the similarity between two strings
+:code:`similar_text` can calculate the similarity between two strings
 
 Installation
 ------------
