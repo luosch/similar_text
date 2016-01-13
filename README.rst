@@ -10,7 +10,7 @@ similar_text
 Installation
 ------------
 
-The tool works with Python 2 and Python 3. It can be installed with `Pip` :
+The tool works with Python 2 and Python 3. It can be installed with `pip` :
 
 ::
 
@@ -24,6 +24,6 @@ Usage
 
     >>> from similar_text import similar_text
     >>> similar_text('luosicheng', 'lsc')
-    46.15384615384615
+    46
     >>> similar_text('lsc', 'luosicheng')
-    46.15384615384615
+    46
