@@ -9,7 +9,7 @@ with open('README.rst') as f:
 setup(
     name = 'similar_text',
     packages = ['similar_text'],
-    version = '0.1.3',
+    version = '0.2.0',
     description = 'Calculates the similarity between two strings',
     long_description = readme,
     author = 'Sicheng Luo',
