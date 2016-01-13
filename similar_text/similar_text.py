@@ -38,39 +38,15 @@ def similar_char(str1, str2):
     return total
 
 
-def similar_text(str1, str2, option='normal'):
+def similar_text(str1, str2):
     """
-    return a float value in [0, 100], which stands for match level
+    return a int value in [0, 100], which stands for match level
     """
-    if len(str1) == 0 and len(str2) == 0:
+    if not (isinstance(str1, str) or isinstance(str1, unicode)):
+        raise TypeError("must be str or unicode")
+    elif not (isinstance(str2, str) or isinstance(str2, unicode)):
+        raise TypeError("must be str or unicode")
+    elif len(str1) == 0 and len(str2) == 0:
         return 0.0
-    elif option == 'normal':
-        return similar_char(str1, str2) * 200.0 / (len(str1) + len(str2))
-    elif option == 'fast':
-        return 100.0 - edit_distance(str1, str2) * 200.0 / (len(str1) + len(str2))
     else:
-        raise ValueError("no such option")
-
-
-def edit_distance(str1, str2):
-    m, n = len(str1) + 1, len(str2) + 1
-        
-    if m == 1 or n == 1:
-        return max(m, n) - 1
-    
-    dp = [[0 for _ in range(n)] for __ in range(m)]
-    
-    for i in range(m):
-        dp[i][0] = i
-    
-    for i in range(n):
-        dp[0][i] = i
-    
-    for i in range(1, m):
-        for j in range(1, n):
-            if str1[i - 1] == str2[j - 1]:
-                dp[i][j] = dp[i - 1][j - 1]
-            else:
-                dp[i][j] = min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) + 1
-    
-    return dp[-1][-1]
+        return int(similar_char(str1, str2) * 200.0 / (len(str1) + len(str2)))
